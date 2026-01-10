@@ -1,0 +1,28 @@
+#-------------------------------------------------------------------------------
+#  AUTOR.....: Manuel Expósito Suárez 2021
+#  CLASE.....: cursodec.hbp
+#  FECHA MOD.: 05/08/2021
+#  VERSION...: 1.00
+#  PROPOSITO.: Script de construccion de la libreria para todos los compiladores
+#              de C con Hbmk2 Harbour
+#-------------------------------------------------------------------------------
+
+# Indica que vamos a construir una libreria
+-hblib
+
+# Si hubiera ficheros includes para nuestra libreria le indicariamos su ubicacion
+# en nuestro caso no los hay
+# -i./src/include
+
+# Indicamos que todos los PRG y el directorio que forman parte de la libreria
+./src/prg/tfbuffer.prg
+./src/prg/thbuffer.prg
+
+# Indicamos que todos los C y el  directorio que forman parte de la libreria
+./src/c/cursode1.c
+./src/c/cursode2.c
+
+# Nombre de la libreria y donde la tiene que dejar una vez construida
+-o./lib/cursode
+
+#-------------------------------------------------------------------------------

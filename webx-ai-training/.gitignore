@@ -1,0 +1,33 @@
+# WebX (Harbour) compiler and build artifacts
+*.obj
+*.lib
+*.exe
+*.dll
+*.bak
+*.pdb
+*.log
+
+# Backup and temp files
+*~
+*.tmp
+*.old
+*.orig
+
+# IDE files (Code::Blocks, Visual Studio, VSCode)
+*.depend
+*.layout
+*.cbp
+*.sdf
+*.vcxproj*
+*.ncb
+*.suo
+
+# macOS and Linux editor/system files
+.DS_Store
+*.swp
+Harbour_Include
+Harbour_oop_manual_2025_12_20_001
+Archive
+Appendix
+
+

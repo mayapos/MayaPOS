@@ -1,0 +1,19 @@
+#-------------------------------------------------------------------------------
+#  AUTOR.....: Manuel Expósito Suárez 2021
+#  CLASE.....: cursodec.hbp
+#  FECHA MOD.: 05/08/2021
+#  VERSION...: 1.00
+#  PROPOSITO.: Script de construccion de la libreria para todos los compiladores
+#              de C con Hbmk2 Harbour
+#-------------------------------------------------------------------------------
+
+# Indica que vamos a construir una libreria de importacion
+-hbimplib
+
+# Nombre de la lib libreria. Por defecto el de la DLL
+-implib=sqlite3
+
+# Fuentes de donde saca la informacion. Realmente solo es necesario el *.def
+sqlite3.dll
+
+#-------------------------------------------------------------------------------
