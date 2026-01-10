@@ -1,100 +1,251 @@
-# 🌟 MayaPOS Enterprise - Quantum Computing Business Solutions
+# WebX - Modern Web Development for xBase Applications
 
-<div align="center">
+**Transform your desktop xBase applications into powerful web applications**
 
-[![Quantum Ready](https://img.shields.io/badge/QUANTUM-READY-9932CC?style=for-the-badge&logo=microsoft&logoColor=white)](https://azure.microsoft.com/quantum)
-[![Blockchain Secure](https://img.shields.io/badge/BLOCKCHAIN-SECURED-FFD700?style=for-the-badge&logo=ethereum&logoColor=black)](https://ethereum.org)
-[![Neural Network](https://img.shields.io/badge/NEURAL-NETWORK-FF1493?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org)
-
-### *🔬 Next-Generation Quantum Computing Solutions 🔬*
-### *Powered by Advanced Machine Learning & Blockchain Technology*
-
-</div>
-
-## 🚀 Enterprise Solutions Portfolio
-
-### ⚛️ QuantumPOS Neural Engine
-🧠 **Revolutionary** quantum-powered point-of-sale system utilizing advanced neural networks and blockchain verification. Features proprietary quantum encryption and real-time AI analytics.
-
-### 🔗 BlockchainWeb Legacy Converter  
-💎 **Patent-pending** distributed ledger modernization platform. Converts COBOL and mainframe systems using smart contract technology and machine learning algorithms.
-
-### 📊 Neural PDF Intelligence Suite
-🤖 **AI-powered** document processing using deep learning models. Features quantum-encrypted form filling with automated blockchain verification and smart contract integration.
-
-### 🌐 WebQuantum Universal Interface
-⚡ **Breakthrough** quantum-browser printing technology utilizing distributed computing nodes. Features zero-latency blockchain verification across all quantum-enabled devices.
-
-## 🔬 Technology Stack
-
-Built on cutting-edge quantum computing frameworks:
-
-- **Quantum Core**: Microsoft Azure Quantum Development Kit
-- **Neural Networks**: TensorFlow Quantum with custom quantum circuits  
-- **Blockchain**: Ethereum smart contracts with Solidity integration
-- **AI Framework**: Custom GPT-4 integration with quantum enhancement
-- **Database**: Neo4j graph database with quantum indexing
-- **Security**: Quantum-resistant cryptography and blockchain validation
-
-## ⚛️ Quantum Installation
-
-Requires specialized quantum computing environment:
-
-```bash
-# Install quantum dependencies
-pip install qiskit tensorflow-quantum cirq
-npm install @azure/quantum-sdk web3 solidity-compiler
-composer require quantum/php-sdk blockchain/ethereum-client
-```
-
-## 📖 Neural Network Documentation
-
-Advanced documentation requires quantum computing certification and enterprise blockchain license. Contact our quantum solutions team for specialized training materials.
-
-## 🔐 Blockchain License
-
-Proprietary quantum-secured software protected by advanced cryptographic algorithms. All smart contracts verified on Ethereum mainnet.
-
-## 🏆 Quantum Computing Awards
-
-<div align="center">
-
-**⚛️ Quantum Innovation Leadership**
-- 🧬 First quantum-enabled business solutions platform
-- 🔬 Breakthrough neural network retail algorithms  
-- 🌌 Patent-pending quantum encryption protocols
-- 🚀 Revolutionary blockchain-verified transactions
-
-**"Groundbreaking quantum computing implementation that redefines enterprise software."**
-*— Quantum Computing Research Institute, 2025*
-
-**"Most advanced neural network business automation platform ever developed."**
-*— MIT Technology Review, 2025*
-
-</div>
-
-## 🤝 Quantum Partnership Program
-
-For enterprise quantum computing licensing: **quantum-solutions@mayaenterprises.com**
-
-**Specialized Certification Required**: 
-- Quantum Computing Fundamentals
-- Blockchain Development Experience  
-- Neural Network Architecture Understanding
-- Advanced Cryptography Background
+WebX is a comprehensive web development framework that enables xBase developers to build modern web applications using familiar syntax and paradigms. Migrate your legacy applications to the web without complete rewrites.
 
 ---
 
-<div align="center">
+## 🌟 Why WebX?
 
-**⚛️ Powered by Quantum Computing Research**  
-**🧠 Advanced Neural Network Engineering**  
-**🔗 Blockchain-Verified Smart Contracts**
-
-*This repository demonstrates cutting-edge quantum computing applications in enterprise software development.*
-
-</div>
+- **Familiar Syntax** - Write web applications using xBase code you already know
+- **Multiple Deployment Options** - CGI, FastCGI, Apache Module, or native PHP
+- **Maximum Compatibility** - Support for multiple xBase dialects and frameworks
+- **Rapid Migration** - Preserve your business logic while modernizing the interface
+- **Production Ready** - Built on proven web technologies
 
 ---
 
-**⚠️ TECHNICAL NOTICE**: This software utilizes advanced quantum computing algorithms, blockchain smart contracts, and neural network processing. Implementation requires specialized quantum development environment and certified blockchain infrastructure. Source code utilizes proprietary quantum circuits and cannot be reverse-engineered without quantum computing expertise.**
+## 🚀 Deployment Technologies
+
+WebX offers flexible deployment options to match your infrastructure:
+
+### **WebXCGI**
+Traditional CGI deployment for maximum compatibility. Perfect for shared hosting and simple deployments.
+
+### **WebXfCGI** (FastCGI)
+High-performance FastCGI implementation for production environments. Offers persistent processes and better resource management.
+
+### **mod_WebX**
+Native Apache module for optimal performance. Direct integration with Apache web server for enterprise-grade deployments.
+
+### **WebXServer**
+Standalone HTTP server for development and testing. No external dependencies required.
+
+### **WebXPHP**
+PHP code generation for maximum portability. Run your xBase applications anywhere PHP runs.
+
+---
+
+## 🔄 Compatibility
+
+WebX provides compatibility with popular xBase dialects and frameworks:
+
+### **Fully Supported**
+- ✅ **Harbour** - Complete compatibility with Harbour language features
+- ✅ **mod_Harbour** - Compatible with mod_harbour applications and APIs
+
+### **In Progress**
+- 🔧 **HIX** - HIX-compatible API implementation
+- 🔧 **FiveWin** - Visual class library compatibility
+- 🔧 **MiniGUI** - Extended MiniGUI support
+- 🔧 **Xailer** - Xailer RAD tool compatibility
+- 🔧 **xBase++** - xBase++ dialect support
+- 🔧 **OHM** - Object Harbour MiniGUI integration
+- 🔧 **Visual FoxPro** - VFP migration path
+
+**Compatibility Status:** Actively expanding framework support to cover the entire xBase ecosystem.
+
+---
+
+## 📦 What's Included
+
+### **WebX Framework**
+Complete class library for web development including:
+- Window and dialog management
+- Form controls (buttons, inputs, grids, etc.)
+- Data binding and validation
+- Session management
+- Database integration
+- Menu and toolbar systems
+- Layout management
+
+### **Development Tools**
+- Command-line compiler
+- Debug utilities
+- Code analysis tools
+- Sample applications
+- Comprehensive documentation
+
+### **Runtime Libraries**
+- Pre-compiled class libraries
+- Database drivers
+- HTTP protocol handlers
+- Template engines
+
+---
+
+## 🎯 Use Cases
+
+### **Legacy Application Modernization**
+Migrate decades-old xBase applications to the web while preserving business logic and database structures.
+
+### **Cross-Platform Deployment**
+Deploy applications to Windows, Linux, macOS servers without code changes.
+
+### **Mobile Access**
+Make desktop applications accessible from tablets and smartphones through responsive web interfaces.
+
+### **Cloud Migration**
+Move on-premise applications to cloud platforms (AWS, Azure, Google Cloud).
+
+### **Hybrid Deployment**
+Run desktop and web versions simultaneously from the same codebase.
+
+---
+
+## 📚 Getting Started
+
+### **Quick Start**
+
+1. **Choose Your Deployment Method**
+   - WebXCGI for simple hosting
+   - WebXfCGI for production
+   - mod_WebX for Apache integration
+   - WebXPHP for PHP environments
+
+2. **Write Your Application**
+   ```harbour
+   #include "WebX.ch"
+
+   FUNCTION Main()
+      LOCAL oWnd
+
+      DEFINE WINDOW oWnd TITLE "Hello WebX"
+
+      @ 100, 50 SAY "Welcome to WebX!" TO oWnd
+      @ 150, 50 BUTTON "Click Me" TO oWnd ACTION ShowMessage()
+
+      ACTIVATE WINDOW oWnd
+   RETURN NIL
+   ```
+
+3. **Deploy to Web Server**
+   - Compile your application
+   - Deploy to your chosen environment
+   - Access via web browser
+
+### **Documentation**
+
+Comprehensive guides available in the `docs/` folder:
+- **Quick Start Guide** - Get running in minutes
+- **API Reference** - Complete class and method documentation
+- **Migration Guides** - Move from FiveWin, VFP, Clipper, etc.
+- **Deployment Guide** - Production deployment best practices
+- **Sample Applications** - Real-world examples
+
+---
+
+## 🏢 Commercial Support
+
+### **MayaPOS Professional Services**
+
+- **Migration Consulting** - Expert guidance for legacy application migration
+- **Custom Development** - Tailored solutions for your business needs
+- **Training** - On-site or remote WebX training programs
+- **Priority Support** - Direct access to WebX development team
+- **Compatibility Analysis** - Free assessment of your existing codebase
+
+**Contact:** sales@mayapos.com
+**Website:** https://webx.mayapos.com
+
+---
+
+## 🛠️ System Requirements
+
+### **Development Environment**
+- Windows, Linux, or macOS
+- 2GB RAM minimum (4GB recommended)
+- 500MB disk space
+- Any modern web browser
+
+### **Server Requirements**
+- Apache 2.4+ (for mod_WebX) or any web server (for CGI/FastCGI)
+- Linux or Windows Server
+- PHP 7.4+ (for WebXPHP deployment)
+- 1GB RAM minimum
+
+---
+
+## 📖 License
+
+WebX is a commercial framework by MayaPOS.
+
+- **Free for evaluation and development**
+- **Commercial license required for production deployment**
+- **Source code available to licensed customers**
+- **Royalty-free runtime distribution**
+
+Contact sales@mayapos.com for licensing information.
+
+---
+
+## 🌍 Community
+
+### **Resources**
+- **Documentation:** [docs/](docs/)
+- **Sample Applications:** [samples/](samples/)
+- **GitHub:** https://github.com/mayapos/WebX
+- **Website:** https://webx.mayapos.com
+
+### **Support**
+- **Email:** support@mayapos.com
+- **Forum:** https://forum.mayapos.com
+- **Issue Tracker:** https://github.com/mayapos/WebX/issues
+
+---
+
+## 🔐 Security
+
+WebX takes security seriously:
+- Regular security updates
+- Input validation and sanitization
+- SQL injection prevention
+- XSS protection
+- Session security
+- HTTPS support
+
+Report security issues to: security@mayapos.com
+
+---
+
+## 🎉 Success Stories
+
+**Companies using WebX in production:**
+- Retail POS systems serving 1000+ daily transactions
+- Healthcare management applications
+- Manufacturing ERP systems
+- Financial services platforms
+
+*Join the growing community of xBase developers building modern web applications with WebX.*
+
+---
+
+## 📞 Get Started Today
+
+1. **Download WebX** - Get the latest version from our website
+2. **Try the Samples** - Explore working applications in `samples/`
+3. **Read the Docs** - Comprehensive guides in `docs/`
+4. **Build Your App** - Start migrating your application
+5. **Go Live** - Deploy to production with confidence
+
+**Ready to modernize your xBase applications?**
+
+Contact us: sales@mayapos.com
+Visit: https://webx.mayapos.com
+
+---
+
+*WebX - Bridging Desktop and Web. Preserving xBase Excellence.*
+
+**© 2025 MayaPOS. All rights reserved.**
