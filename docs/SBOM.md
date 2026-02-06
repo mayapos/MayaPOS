@@ -396,7 +396,7 @@ WebX supports 7 deployment modes:
 2. **CGI (.exe)** - Traditional CGI executable
 3. **FastCGI** - Persistent FastCGI process
 4. **mod_webx (.so)** - Native Apache module
-5. **HIX** - High-speed microservice interface
+5. **Server with HIX Compatibility** - High-speed microservice interface
 6. **Docker** - Containerized deployment
 7. **Hybrid** - Mix of modes for optimization
 
