@@ -20,9 +20,9 @@ This AI training dataset is the result of contributions from multiple sources an
   - C ↔ WebX (Harbour) Interop Guide (translation and compilation)
 
 **License:** CC BY-NC-SA 4.0
-**Contact:** [Original repository attribution]
+**Contact:** [https://github.com/EricLendvai/harbour-language-for-ai-training]
 
-### Byron Henderson (MayaPOS)
+### Bayron Landaverry (xBasePHP.com)
 - **WebX Framework Creator:** Main WebX framework development
 - **Contributions:**
   - WebX GUI Classes documentation (`webx_gui_classes.md`)
@@ -32,8 +32,8 @@ This AI training dataset is the result of contributions from multiple sources an
   - Visual TLayout Designer (`tools/designer_tlayout.html`)
   - WebX class implementations and architecture
 
-**Organization:** MayaPOS
-**WebX Framework:** https://webx.mayapos.com (commercial/proprietary)
+**Organization:** xBasePHP
+**WebX Framework:** https://www.xBasePHP.com (commercial/proprietary)
 **Repository:** Private (commercial software)
 
 ---
@@ -72,7 +72,7 @@ This AI training dataset is the result of contributions from multiple sources an
 The WebX framework is built on Harbour, an open-source xBase compiler. While WebX itself is proprietary, it uses Harbour's GPL-licensed compiler with the linking exception that allows commercial applications.
 
 ### FiveWin Compatibility
-**Note:** WebX provides FiveWin-compatible API signatures but contains **NO FiveWin source code**. All implementations are original work by Byron Henderson/MayaPOS.
+**Note:** WebX provides FiveWin-compatible API signatures but contains **NO FiveWin source code**. All implementations are original work by Bayron Landaverry/xBasePHP.com.
 
 **Compatibility approach:** API-compatible method signatures only (legal under Oracle v. Google precedent)
 
@@ -119,25 +119,24 @@ We welcome contributions to this AI training dataset:
 
 ### This Repository (AI Training Data)
 **License:** CC BY-NC-SA 4.0 (Creative Commons Attribution-NonCommercial-ShareAlike 4.0)
-**Copyright:** © 2025 Eric Lendvai & Byron Henderson (MayaPOS)
+**Copyright:** © 2025 Eric Lendvai & Bayron Landaverry (xBasePHP.com)
 
 **You are free to:**
-- ✅ Share - Copy and redistribute the material
+- ✅ Share - Copy and redistribute the material for use with WebX framework
 - ✅ Adapt - Remix, transform, and build upon the material
-- ✅ Use for AI training and development
+- ✅ Use for AI training and development of Webx apps
 - ✅ Use commercially with WebX framework
 
 **Under the following terms:**
 - 📢 **Attribution** - You must give appropriate credit, provide a link to the license, and indicate if changes were made
 - 🚫 **NonCommercial** - You may not use the material for commercial purposes *except* when bundled with the WebX framework or used for WebX development
-- 📜 **ShareAlike** - If you remix, transform, or build upon the material, you must distribute your contributions under the same license
 
 ### WebX Framework (Separate License)
 **License:** Commercial/Proprietary
-**Copyright:** © 2025 MayaPOS
-**Download:** https://webx.mayapos.com
+**Copyright:** © 2025 xBasePHP
+**Download:** https://webx.xBasePHP.com
 
-**Note:** This training data repository does NOT include the WebX framework binaries, compiler, or proprietary source code. Those require a separate license from MayaPOS.
+**Note:** This training data repository does NOT include the WebX framework binaries, compiler, or proprietary source code. Those require a separate license from xBasePHP.
 
 ---
 
@@ -149,7 +148,7 @@ We welcome contributions to this AI training dataset:
 ```
 WebX AI Training Dataset
 https://github.com/mayapos/webx-ai-training
-© 2025 Eric Lendvai & Byron Henderson (MayaPOS)
+© 2025 Eric Lendvai & Bayron Landaverry (xBasePHP.com)
 Licensed under CC BY-NC-SA 4.0
 ```
 
@@ -179,7 +178,7 @@ If you create derivative works:
 
 **Example:**
 ```
-Original: WebX AI Training Dataset by Eric Lendvai & Byron Henderson
+Original: WebX AI Training Dataset by Eric Lendvai & Bayron Landaverry
 Modified by: [Your Name]
 Changes: Added XYZ examples, translated to Spanish
 License: CC BY-NC-SA 4.0 (same as original)
@@ -219,7 +218,7 @@ To all developers who provided feedback on WebX and helped refine this documenta
 **Eric Lendvai:** [Contact information if public]
 
 ### WebX Framework Creator
-**Byron Henderson (MayaPOS):** [Contact information if public]
+**Bayron Landaverry (xBasePHP.com):** [Contact information if public]
 
 ---
 
@@ -234,7 +233,7 @@ To all developers who provided feedback on WebX and helped refine this documenta
 
 **Contributors to v1.0.0:**
 - Eric Lendvai - Original language rules, function specs, C interop guide
-- Byron Henderson - GUI classes, designer workflow, deployment options
+- Bayron Landaverry - GUI classes, designer workflow, deployment options
 - Manu Expósito Suárez - Original C interop material (translated with permission)
 
 ---
@@ -255,7 +254,7 @@ WebX stands on these shoulders, bringing xBase to the modern web with AI-native 
 ---
 
 **Last Updated:** 2025-01-09
-**Maintained By:** Eric Lendvai & Byron Henderson (MayaPOS)
+**Maintained By:** Eric Lendvai & Bayron Landaverry (xBasePHP.com)
 **Repository:** https://github.com/mayapos/webx-ai-training
 
 ---
@@ -264,21 +263,21 @@ WebX stands on these shoulders, bringing xBase to the modern web with AI-native 
 
 ### Academic/Research Citation
 ```
-Lendvai, E., & Henderson, B. (2025). WebX AI Training Dataset:
+Lendvai, E., & Landaverry, B. (2025). WebX AI Training Dataset:
 Comprehensive documentation for AI-assisted Harbour web development.
 GitHub. https://github.com/mayapos/webx-ai-training
 ```
 
 ### Informal Citation
 ```
-WebX AI Training Dataset by Eric Lendvai & Byron Henderson (MayaPOS)
+WebX AI Training Dataset by Eric Lendvai & Bayron Landaverry (xBasePHP.com)
 https://github.com/mayapos/webx-ai-training
 ```
 
 ### BibTeX
 ```bibtex
 @misc{webx_ai_training_2025,
-  author       = {Lendvai, Eric and Henderson, Byron},
+  author       = {Lendvai, Eric and Landaverry, Bayron},
   title        = {WebX AI Training Dataset},
   year         = {2025},
   publisher    = {GitHub},

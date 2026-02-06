@@ -1,130 +1,204 @@
-# WebX Language — AI Training Dataset (and companion references)
+# WebX AI Training Resources - Public Documentation
 
-This repository provides **resources to help WebX (Harbour) developers use AI-assisted development effectively and safely**.
-
-It currently contains six core resource groups:
-
-- A **GPT-ready WebX Language rulebook** (living document).
-- An example **personal coding standards** document to keep AI-generated WebX (Harbour) code consistent (adapt it to your needs).
-- A machine-readable **WebX (Harbour) function definitions** dataset in **YAML**, intended for AI-assisted code generation and documentation.
-- A **C ↔ WebX (Harbour) interop guide** (Markdown chapters + a compiled PDF), including an **English translation** (with author approval) of *"The New Buccaneers — Episode 2"* by Manu Expósito Suárez.
-- **WebX GUI Classes reference** - Complete documentation for WebX's proprietary GUI classes (TWindow, TLayout, TButton, etc.).
-- **Designer → AI workflow guide** - Step-by-step instructions for enhancing visual layouts with AI assistance.
+**Repository:** MayaPOS Public Documentation
+**Author:** Bayron Landaverry
+**Company:** xBasePHP.com
+**Last Updated:** 2026-02-05
 
 ---
 
-## What’s in this repo
+## ⚠️ IMPORTANT: This is PUBLIC Documentation ONLY
 
-### 1) GPT-ready guidance documents
+**This repository contains:**
+- ✅ User-facing WebX documentation
+- ✅ Safe to publish on GitHub
+- ✅ NO compiler internals or secrets
 
-- **AI Quick Start** (30-second primer, syntax cheat sheet, workflow checklist): [`AI_QUICK_START.md`](./AI_QUICK_START.md) ⭐ **START HERE**
-- **🚨 Output Format Rules** (critical safety rule: always generate .prg files, not .html/.php): [`OUTPUT_FORMAT_RULES.md`](./OUTPUT_FORMAT_RULES.md) ⭐ **IMPORTANT**
-- **WebX Deployment Options** (CGI, FastCGI, Server, PHP, mod_WebX, mod_harbour): [`webx_deployment_options.md`](./webx_deployment_options.md)
-- Unified WebX (Harbour) rulebook (codegen guardrails + semantics): [`webx_language_rules.md`](./webx_language_rules.md)
-- Example "project defaults" prompts/snippets (how to constrain AI in a specific repo):
-  [`Example_webx_language_rules_ProjectDefaults.md`](./Example_webx_language_rules_ProjectDefaults.md)
-- Personal cross-project coding standards (formatting, naming, etc.):
-  [`personal_coding_standards.md`](./personal_coding_standards.md)
-- **WebX GUI Classes reference** (TWindow, TLayout, TButton, TSay, TGet, etc.): [`webx_gui_classes.md`](./webx_gui_classes.md)
-- **Designer → AI workflow** (visual layout to functional app): [`webx_designer_workflow.md`](./webx_designer_workflow.md)
+**What's NOT here (kept internal):**
+- ❌ CORE_TRANSPILER_RULES.md (compiler internals - in webx repo)
+- ❌ standard_signatures.json (API internals - in webx repo)
+- ❌ training_dataset.jsonl (compiler patterns - in webx repo)
+- ❌ AI_AGENT_ONBOARDING.md (internal workflows - in webx repo)
 
-### 2) Function dataset (machine-readable YAML)
-
-- YAML schema and conventions: [`SPEC_webx_functions.md`](./SPEC_webx_functions.md)
-- Manifest (slug → part file map): [`webx_functions/index.yaml`](./webx_functions/index.yaml)
-- Function definitions (current single-part dataset):  
-  [`webx_functions/webx_functions_part_001.yaml`](./webx_functions/webx_functions_part_001.yaml)
-- Convenience snapshot (zip of the two files above):  
-  [`webx_functions/webx_functions_2025_12_25_001.zip`](./webx_functions/webx_functions_2025_12_25_001.zip)
-
-### 3) C ↔ WebX (Harbour) interop guide (book-style)
-
-Folder: [`How_to_Interface_Between_C_and_WebX/`](./How_to_Interface_Between_C_and_WebX/)
-
-- Examples bundle: [`How_to_Interface_Between_C_and_WebX/Examples.zip`](./How_to_Interface_Between_C_and_WebX/Examples.zip)
-- Cover / index: [`How_to_Interface_Between_C_and_WebX/WebX_C_00_Cover_and_Index.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_00_Cover_and_Index.md)
-- Chapter 01: [`How_to_Interface_Between_C_and_WebX/WebX_C_01_Prologue_and_Purpose.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_01_Prologue_and_Purpose.md)
-- Chapter 02: [`How_to_Interface_Between_C_and_WebX/WebX_C_02_Tools_Needed.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_02_Tools_Needed.md)
-- Chapter 03: [`How_to_Interface_Between_C_and_WebX/WebX_C_03_A_Bit_of_C.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_03_A_Bit_of_C.md)
-- Chapter 04: [`How_to_Interface_Between_C_and_WebX/WebX_C_04_Operators.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_04_Operators.md)
-- Chapter 05: [`How_to_Interface_Between_C_and_WebX/WebX_C_05_Control_Structures.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_05_Control_Structures.md)
-- Chapter 06: [`How_to_Interface_Between_C_and_WebX/WebX_C_06_Elementary_Data_Types.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_06_Elementary_Data_Types.md)
-- Chapter 07: [`How_to_Interface_Between_C_and_WebX/WebX_C_07_Structured_Data_Types.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_07_Structured_Data_Types.md)
-- Chapter 08: [`How_to_Interface_Between_C_and_WebX/WebX_C_08_Structures_Unions_Enums.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_08_Structures_Unions_Enums.md)
-- Chapter 09: [`How_to_Interface_Between_C_and_WebX/WebX_C_09_Typedef_and_Variables.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_09_Typedef_and_Variables.md)
-- Chapter 10: [`How_to_Interface_Between_C_and_WebX/WebX_C_10_Pointers.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_10_Pointers.md)
-- Chapter 11: [`How_to_Interface_Between_C_and_WebX/WebX_C_11_Dynamic_Memory.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_11_Dynamic_Memory.md)
-- Chapter 12: [`How_to_Interface_Between_C_and_WebX/WebX_C_12_VM_Stack_and_Symbol_Table.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_12_VM_Stack_and_Symbol_Table.md)
-- Chapter 13: [`How_to_Interface_Between_C_and_WebX/WebX_C_13_C_Functions_for_WebX_Harbour.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_13_C_Functions_for_WebX_Harbour.md)
-- Chapter 14: [`How_to_Interface_Between_C_and_WebX/WebX_C_14_Compiling_C_in_PRG.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_14_Compiling_C_in_PRG.md)
-- Chapter 15: [`How_to_Interface_Between_C_and_WebX/WebX_C_15_Extended_System.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_15_Extended_System.md)
-- Chapter 16: [`How_to_Interface_Between_C_and_WebX/WebX_C_16_Item_API.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_16_Item_API.md)
-- Chapter 17: [`How_to_Interface_Between_C_and_WebX/WebX_C_17_Execute_Functions_Methods_CodeBlocks_from_C.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_17_Execute_Functions_Methods_CodeBlocks_from_C.md)
-- Chapter 18: [`How_to_Interface_Between_C_and_WebX/WebX_C_18_Error_API.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_18_Error_API.md)
-- Chapter 19: [`How_to_Interface_Between_C_and_WebX/WebX_C_19_FileSys_API_.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_19_FileSys_API_.md)
-- Chapter 20: [`How_to_Interface_Between_C_and_WebX/WebX_C_20_Creating_Libraries.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_20_Creating_Libraries.md)
-- Chapter 21: [`How_to_Interface_Between_C_and_WebX/WebX_C_21_DLL_Interfaces.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_21_DLL_Interfaces.md)
-- Chapter 22: [`How_to_Interface_Between_C_and_WebX/WebX_C_22_Garbage_Collector_Internals.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_22_Garbage_Collector_Internals.md)
-- Chapter 23: [`How_to_Interface_Between_C_and_WebX/WebX_C_23_Compiler_Optimizations_and_Pcode.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_23_Compiler_Optimizations_and_Pcode.md)
-- Chapter 24: [`How_to_Interface_Between_C_and_WebX/WebX_C_24_Multi_Threading_and_TLS.md`](./How_to_Interface_Between_C_and_WebX/WebX_C_24_Multi_Threading_and_TLS.md)
-- Compiled PDF: [`How_to_Interface_Between_C_and_WebX/WebX_C_2025_11_10.pdf`](./How_to_Interface_Between_C_and_WebX/WebX_C_2025_11_10.pdf)
-- Diagram image: [`How_to_Interface_Between_C_and_WebX/stack_diagram.png`](./How_to_Interface_Between_C_and_WebX/stack_diagram.png)
-
-### 4) Repo meta
-
-- License: [`LICENSE`](./LICENSE) (CC BY-NC-SA 4.0)
-- Credits and attributions: [`CREDITS.md`](./CREDITS.md)
+**Location of internal files:** `htdocs/webx/docs/internal/ai-training/` (NOT published)
 
 ---
 
-## How to use these resources with AI
+## 📦 Repository Structure
 
-### Traditional Development Workflow:
+```
+htdocs/
+├── webx/                              # Main development repo (NOT published)
+│   ├── docs/internal/ai-training/     # INTERNAL: Compiler secrets
+│   │   ├── CORE_TRANSPILER_RULES.md   # (secret)
+│   │   ├── standard_signatures.json    # (secret)
+│   │   └── training_dataset.jsonl      # (secret)
+│   └── webx-ai-training/              # PUBLIC: User docs (copied to mayapos)
+│
+└── mayapos/                           # Public repo (published to GitHub)
+    └── webx-ai-training/              # PUBLIC: User docs ONLY
+        ├── webx_language_rules_ESSENTIALS.md
+        ├── webx_gui_classes.md
+        └── ... (public docs)
+```
 
-1. Provide the rulebook (`webx_language_rules.md`) and your project defaults as context (system prompt / project instructions).
-2. Provide the function dataset (YAML) as an authoritative "allow-list" for which functions can be used.
-3. Use `personal_coding_standards.md` to enforce consistency (formatting, naming, patterns).
-4. Use the interop guide when generating `#pragma BEGINDUMP` code or writing C extensions.
-
-### Designer-Driven AI Development Workflow (NEW):
-
-1. **Design visually:** Use `tools/designer_tlayout.html` to create your layout structure
-2. **Generate skeleton:** Designer outputs .prg file with TLayout sections and smart TODOs
-3. **AI enhancement:** Provide AI with:
-   - Generated .prg file
-   - `webx_gui_classes.md` (class reference)
-   - `webx_designer_workflow.md` (workflow guide)
-   - `webx_language_rules.md` (syntax rules)
-   - Your functional requirements
-4. **AI fills TODOs:** AI preserves layout structure, adds controls and business logic
-5. **Compile and run:** Build with WebX compiler, deploy as CGI or mod_harbour
-
-**Benefits:**
-- Visual design separated from functional code
-- AI understands layout structure and constraints
-- Consistent section-based architecture
-- Faster development (design → generate → enhance → deploy)
-
-If you are publishing derivative work that includes the translated book content, consider adding an explicit attribution note in your downstream project and verifying that your usage matches the license terms and the author approval conditions described in this repository.
+**Rule:** Copy from `webx/webx-ai-training/` to `mayapos/webx-ai-training/` for publishing.
 
 ---
 
-## Contributing
+## 📚 What's In This Repository
 
-The schema and companion documents may evolve. Please open an issue with suggestions or corrections. Pull requests are welcome.
+### Language & Syntax Guides
+
+1. **[webx_language_rules_ESSENTIALS.md](webx_language_rules_ESSENTIALS.md)** (13 KB) - AI-Optimized ⭐
+   - WebX-specific patterns only
+   - 93.8% smaller than COMPLETE
+   - Recommended for AI agents
+
+2. **[webx_language_rules_COMPLETE.md](webx_language_rules_COMPLETE.md)** (208 KB) - Full Reference
+   - Comprehensive Harbour + WebX syntax
+   - For human developers
+
+3. **[webx_gui_classes.md](webx_gui_classes.md)** (19 KB) - Class Reference
+   - TWindow, TButton, TGet, TSay, TMenu
+   - TAccordion, TCarousel, TLayout (WebX-specific)
+
+4. **[AI_QUICK_START.md](AI_QUICK_START.md)** (22 KB) - Quick Start
+   - Getting started with WebX + AI
+   - Common patterns
+
+### Deployment & Workflow
+
+5. **[webx_deployment_options.md](webx_deployment_options.md)** (20 KB)
+   - 6 deployment modes
+   - Production setup guides
+
+6. **[webx_designer_workflow.md](webx_designer_workflow.md)** (20 KB)
+   - Visual designer usage
+   - TLayout Designer tool
+
+### Runtime Libraries (NEW!)
+
+7. **[WEBX_RUNTIME_LIBRARIES.md](WEBX_RUNTIME_LIBRARIES.md)** (40 KB) - Complete Function Reference
+   - 2,000+ PHP function stubs for Harbour compatibility
+   - Harbour RTL (792 functions)
+   - Clipper Tools (200+ functions)
+   - NanForum Library (100+ functions)
+   - PCRE Regex (40+ functions)
+   - TIP Protocol - HTTP/SMTP/FTP (50+ functions)
+   - FiveWin compatibility (300+ functions)
+
+### Standards & Specs
+
+8. **[personal_coding_standards.md](personal_coding_standards.md)** (10 KB)
+   - WebX coding conventions
+   - Style guide
+
+9. **[OUTPUT_FORMAT_RULES.md](OUTPUT_FORMAT_RULES.md)** (8 KB)
+   - HTML/CSS/JS output formatting
+
+10. **[SPEC_webx_functions.md](SPEC_webx_functions.md)** (5 KB)
+    - Function specifications
 
 ---
 
-## Credits
+## 🚀 Quick Start for AI Agents
 
-**Original Dataset Creator:** Eric Lendvai
-**WebX Framework & Extensions:** Byron Henderson (MayaPOS)
-**C Interop Guide:** Based on "The New Buccaneers — Episode 2" by Manu Expósito Suárez (English translation by Eric Lendvai with author approval)
+**Load ESSENTIALS first (recommended):**
 
-For complete attribution details, see [`CREDITS.md`](./CREDITS.md)
+```bash
+# AI-optimized (13 KB - WebX-specific only)
+webx_language_rules_ESSENTIALS.md
+webx_gui_classes.md
+AI_QUICK_START.md
+```
+
+**Total:** ~54 KB context
+**Token cost:** ~13,500 tokens ($0.005 per load with Gemini)
 
 ---
 
-© 2025 Eric Lendvai & Byron Henderson (MayaPOS) — Licensed under [CC BY-NC-SA 4.0](./LICENSE)
+## 🔒 Security Note
 
+**This repository is PUBLIC-SAFE:**
+- ✅ Contains user documentation only
+- ✅ No compiler internals
+- ✅ No API secrets
+- ✅ No training datasets
+- ✅ Safe to publish on GitHub
 
+**Competitive advantage protected:**
+- Compiler internals in `webx/docs/internal/` (NOT published)
+- 182 opcode handling (NOT published)
+- OOP→Functional conversion logic (NOT published)
+- Bug fix patterns (NOT published)
+
+---
+
+## 📊 File Statistics
+
+| File | Size | Purpose |
+|------|------|---------|
+| webx_language_rules_ESSENTIALS.md | 13 KB | AI-optimized |
+| webx_language_rules_COMPLETE.md | 208 KB | Full reference |
+| webx_gui_classes.md | 33 KB | Class docs (110+ classes) |
+| WEBX_RUNTIME_LIBRARIES.md | 40 KB | **2,000+ function stubs** |
+| webx_deployment_options.md | 20 KB | Deployment |
+| AI_QUICK_START.md | 22 KB | Quick start |
+
+**Total:** ~336 KB public documentation
+**Runtime Functions:** 2,000+ (Harbour RTL, Clipper Tools, NanForum, Regex, TIP, FiveWin)
+
+---
+
+## 🔄 Update Process
+
+**To update public docs:**
+
+1. Edit in `webx/webx-ai-training/` (source)
+2. Copy to `mayapos/webx-ai-training/` (public)
+3. Commit and push mayapos repo
+
+**Command:**
+```bash
+cd c:/xampp2025/htdocs/webx/webx-ai-training
+cp -v *.md ../../mayapos/webx-ai-training/
+cd ../../mayapos
+git add webx-ai-training/
+git commit -m "docs: Update WebX documentation"
+git push origin main
+```
+
+**NEVER copy from `webx/docs/internal/ai-training/` (contains secrets!)**
+
+---
+
+## 🙏 Credits
+
+**Author:** Bayron Landaverry  
+**Company:** xBasePHP.com  
+**Contributors:** Eric Lendvai (original training dataset)
+**Harbour Foundation:** Harbour Project
+
+See [CREDITS.md](CREDITS.md) for full attribution.
+
+---
+
+## 📞 Support
+
+**WebX Framework:**
+- Website: https://xBasePHP.com
+- Email: info@xBasePHP.com
+
+**GitHub Issues:**
+- Report issues in this repository
+- For compiler bugs: Contact xBasePHP.com directly (NOT public)
+
+---
+
+**Status:** ✅ PUBLIC DOCUMENTATION ONLY
+**Safe to Publish:** YES
+**Last Updated:** 2026-02-05
+**Author:** Bayron Landaverry (xBasePHP.com)
+
+**Remember: This repo contains PUBLIC user docs. Compiler internals stay in webx repo!** 🔒

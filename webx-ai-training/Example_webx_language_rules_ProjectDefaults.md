@@ -5,7 +5,7 @@
 
 “Assume Harbour_ORM is available”
 
-“Assume backend will be PostgreSQL, not DBF”
+“Assume backend will be DBF”
 
 “Assume no PUBLIC/PRIVATE ever”
 
