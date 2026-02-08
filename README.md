@@ -483,15 +483,28 @@ Contact: mayabuilders@gmail.com
 
 ## 🔐 Security
 
-WebX takes security seriously:
-- ✅ Regular security updates
-- ✅ Input validation and sanitization
-- ✅ SQL injection prevention
-- ✅ XSS protection
-- ✅ Session security (httpOnly, secure flags)
-- ✅ HTTPS support
-- ✅ CORS configuration
-- ✅ CSRF protection
+**WebX is secure by default.** Unlike most frameworks where security is opt-in, WebX automatically protects your application:
+
+### Automatic Protections (No Configuration Required)
+
+| Protection | What It Stops | Status |
+|------------|---------------|--------|
+| **CSRF Tokens** | Cross-site request forgery | Automatic |
+| **XSS Encoding** | Script injection attacks | Automatic |
+| **Session Security** | Cookie hijacking (HttpOnly) | Automatic |
+| **AJAX Whitelist** | Code injection via actions | Automatic |
+| **JS Escaping** | Parameter injection | Automatic |
+
+### Why This Matters
+
+SQL doesn't protect against injection. Apache doesn't ship secure. PHP's `mysqli_real_escape_string()` exists because the language won't protect you automatically.
+
+**WebX went further.** You have to actively *disable* protections to create a vulnerability.
+
+### Learn More
+
+- **[SECURITY_FEATURES.md](SECURITY_FEATURES.md)** - Detailed security documentation
+- **[SECURITY.md](SECURITY.md)** - Vulnerability reporting policy
 
 ---
 
