@@ -1,5 +1,5 @@
 # MayaPOS — WebXPHP Reference Implementation
-**Last Updated: February 2026**
+**Last Updated: February 18, 2026**
 
 MayaPOS is the flagship demonstration application for **WebXPHP** — a complete FiveWin/Harbour
 point-of-sale system running in any browser, generated from the original `.prg` source with
@@ -11,31 +11,38 @@ a single command. No Harbour on the server. No Apache module required. Standard 
 
 A real production POS application — not a toy example — transpiled from FiveWin source to PHP:
 
-- **23 functions working**: VENTAS, FAMILIA, ARTICULO, CAMARERO, CIERRE, EMPRESA, CONFIGU, and more
-- **Real DBF data**: 214 articles, 347 sales, 17 families, 14 waiters (same files as the desktop app)
+- **Comprehensive Functionality**: Full support for Sales, Inventory management, Staff tracking, Daily Closing, and System configuration.
+- **Real-world Scale**: Handles production-level data volumes seamlessly (same DBF/SQL sources as the desktop app)
 - **Full interaction pipeline**:
   - Family buttons → filter articles → article click → ticket line added
   - xBrowse grids with real data, column scaling, row selection, keyboard navigation
-  - Dynamic button images and captions loaded from FAMILIA.DBF memo fields
+  - Dynamic button images and captions loaded directly from database memo fields
   - AJAX action chain: dialog → family DYN → article DYN (stateless PHP, stateful UI)
 - **Font system**: `DEFINE FONT oFont1 SIZE 0, If(oDialog:nHeight <= 900, 14, 20) BOLD` — works
 - **Resource pipeline**: 48 dialogs from .res files, 75 bitmaps extracted automatically
 - **Virtual canvas**: Design at 1366×768, CSS `transform: scale()` adapts to any monitor
+
+## Powered by WebX 1.1 Compatibility Layer
+MayaPOS takes full advantage of the Feb 2026 WebX Framework update, featuring:
+- **Strict FiveWin Syntax**: Uses standard `DEFINE WINDOW/DIALOG` commands mapped 1:1 to PHP classes.
+- **Declarative POS UI**: Specialized commands (`@ POS CATEGORY`, `@ POS PRODUCT`) for building touch interfaces.
+- **Modern Components**: Integrated `TRibbonBar` and `TMyTitle` for a premium look.
+- **PDF Printing**: Native `PRINT TO PDF` support for receipts and invoices.
 
 ---
 
 ## How It's Built
 
 ```
-Ventas.prg (FiveWin source)
+MainApp.prg (FiveWin source)
     ↓
-webxphp.exe Ventas.prg -gp -b -n -I"include;..." -o Ventas.php
+webxphp.exe MainApp.prg -gp -b -n -I"include;..." -o MainApp.php
     ↓
-Ventas.php  ←  readable PHP ($nTotal, $oDialog, $oBrowse)
+MainApp.php  ←  readable PHP ($nTotal, $oDialog, $oBrowse)
     +
 webxphp_classes/  ←  protected framework (obfuscated, $local1/$local2)
     +
-ventas_bootstrap.php  ←  loads only what Ventas actually uses
+bootstrap.php  ←  loads only what the app actually uses
 ```
 
 One command. No intermediate steps visible to the developer.
