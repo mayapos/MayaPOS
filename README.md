@@ -53,8 +53,7 @@ One command. No intermediate steps visible to the developer.
 
 | Metric | Value |
 |--------|-------|
-| Opcode coverage | 181/181 (100%) |
-| Output size ratio | 7:1 vs source PCODE |
+| Output size ratio | 7:1 vs source .prg |
 | PHP dependencies | Zero (pure PHP output) |
 | Variable names (with -b) | Preserved (`$nTotal`, `$oDialog`) |
 | Variable names (without -b) | Obfuscated (`$local1`, `$local2`) |
