@@ -1,141 +1,171 @@
-# MayaPOS — WebXPHP Reference Implementation
-**Last Updated: February 18, 2026**
+# Compile Cobol — Enterprise Legacy Modernization
 
-MayaPOS is the flagship demonstration application for **WebXPHP** — a complete FiveWin/Harbour
-point-of-sale system running in any browser, generated from the original `.prg` source with
-a single command. No Harbour on the server. No Apache module required. Standard PHP hosting.
+**Six IBM languages. One platform. Zero runtime fees.**
 
----
-
-## What It Demonstrates
-
-A real production POS application — not a toy example — transpiled from FiveWin source to PHP:
-
-- **Comprehensive Functionality**: Full support for Sales, Inventory management, Staff tracking, Daily Closing, and System configuration.
-- **Real-world Scale**: Handles production-level data volumes seamlessly (same DBF/SQL sources as the desktop app)
-- **Full interaction pipeline**:
-  - Family buttons → filter articles → article click → ticket line added
-  - xBrowse grids with real data, column scaling, row selection, keyboard navigation
-  - Dynamic button images and captions loaded directly from database memo fields
-  - AJAX action chain: dialog → family DYN → article DYN (stateless PHP, stateful UI)
-- **Font system**: `DEFINE FONT oFont1 SIZE 0, If(oDialog:nHeight <= 900, 14, 20) BOLD` — works
-- **Resource pipeline**: 48 dialogs from .res files, 75 bitmaps extracted automatically
-- **Virtual canvas**: Design at 1366×768, CSS `transform: scale()` adapts to any monitor
-
-## Powered by WebX 1.1 Compatibility Layer
-MayaPOS takes full advantage of the Feb 2026 WebX Framework update, featuring:
-- **Strict FiveWin Syntax**: Uses standard `DEFINE WINDOW/DIALOG` commands mapped 1:1 to PHP classes.
-- **Declarative POS UI**: Specialized commands (`@ POS CATEGORY`, `@ POS PRODUCT`) for building touch interfaces.
-- **Modern Components**: Integrated `TRibbonBar` and `TMyTitle` for a premium look.
-- **PDF Printing**: Native `PRINT TO PDF` support for receipts and invoices.
+Compile Cobol builds transpilers that convert IBM mainframe and midrange source code into human-readable, human-maintainable C++17 and Java 21 — not emulated, not wrapped, not interpreted. The generated code compiles with standard toolchains (MSVC, GCC, Clang, JDK 21) and runs on customer-owned infrastructure with no per-core, per-transaction, or per-CPU-hour fees.
 
 ---
 
-## How It's Built
+## Products
+
+### WebXCOBOL — Enterprise Legacy Transpiler Suite
+
+| Division | Source Language | Target | Status |
+|----------|---------------|--------|--------|
+| I | **COBOL** | C++17 + Java 21 | 219/219 C++ &middot; 203/203 Java &middot; 426/426 NIST-85 |
+| III | **RPG IV** | Java 21 | 306/306 tests &middot; fixed/free/full-free format |
+| IV | **HLASM** | C++17 + Java 21 | 250/250 tests &middot; semantic lifter, not emulator |
+| V | **Schema Migrator** | SQL DDL + data load | PostgreSQL, MySQL, Oracle, MSSQL, DB2i, ANSI |
+| VI | **PL/I** | C++17 + Java 21 | 156/156 tests |
+| VII | **CL** | Java + Bash | 50/50 tests |
+| VIII | **Source Import** | Auto-detect + EBCDIC decode | 11 source types, 8 codepages |
+| IX | **JCL** | Native execution engine | JOB/EXEC/DD/PROC/GDG/COND |
+
+**Total: 1,610+ automated tests. Zero failures.**
+
+### Subsystem Runtime
+
+Every subsystem a mainframe program depends on — implemented and tested:
+
+- **EXEC SQL / DB2** — cursors, dynamic SQL, PREPARE/EXECUTE, SQLCA, ODBC + JDBC
+- **EXEC CICS** — 30+ commands: file control, BMS SEND/RECEIVE MAP, queues, LINK, ENQ/DEQ, HANDLE CONDITION
+- **IMS DB/DC** — full DL/I: GU/GN/GHU/ISRT/REPL/DLET, PCB status codes, SSA command codes
+- **IBM MQ** — MQCONN/MQOPEN/MQPUT/MQGET with reason code emulation
+- **VSAM** — in-memory B-tree KSDS/RRDS/ESDS with primary + alternate keys
+- **Report Writer** — INITIATE/GENERATE/TERMINATE, control breaks, SUM accumulators
+- **RACF** — two-tier security emulation with SHA-256 hashed ACL store
+
+### Compliance (Built-In, Not Bolted On)
+
+| Framework | Coverage |
+|-----------|----------|
+| IRS Publication 1075 | FTI field masking + tokenization |
+| PCI DSS v4.0 | Format-preserving tokenization vault, Luhn validation |
+| HIPAA Safe Harbor | All 18 identifiers per 45 CFR 164.514(b) |
+| SOX Section 404 | HMAC-SHA256 tamper-evident audit chain |
+| GDPR | Right to Erasure (crypto-erase), Portability (JSON), Minimisation |
+| CCPA | Opt-Out, Right to Know, Right to Delete |
+| EO 14028 | CycloneDX 1.4 SBOM on every compilation |
+| NIST 800-53 | Control family mapping (AC, AU, SC, SI) |
+| FIPS 140-2/3 | KMS hooks for HSM integration |
+
+### Cross-Language Bridge
+
+Transpiled programs in any of the six languages can call programs in any other language:
 
 ```
-MainApp.prg (FiveWin source)
-    ↓
-webxphp.exe MainApp.prg -gp -b -n -I"include;..." -o MainApp.php
-    ↓
-MainApp.php  ←  readable PHP ($nTotal, $oDialog, $oBrowse)
-    +
-webxphp_classes/  ←  protected framework (obfuscated, $local1/$local2)
-    +
-bootstrap.php  ←  loads only what the app actually uses
+COBOL program  →  CALL 'RPGPROG'  →  Java (RPG)  →  CALL 'PLIPROG'  →  C++ (PL/I)
 ```
 
-One command. No intermediate steps visible to the developer.
+- Java-to-Java: reflection-based dispatch
+- Java-to-C++: auto-generated JNI bridge
+- C++-to-Java: embedded JVM (JNI_CreateJavaVM)
+- Shared WORKING-STORAGE via memory-mapped files
+
+### HLASM: The Only Semantic Lifter
+
+Our HLASM compiler is **not an emulator**. It maps z/Architecture instructions to equivalent C++/Java constructs:
+
+- `MVC` → `memcpy` (with ripple-fill detection for overlapping moves)
+- `AP/SP/MP/DP` → BCD-native arithmetic (31 digits, no floating-point)
+- `BCT` loops → `while` loops
+- Save area boilerplate → suppressed
+- Result: **human-readable C++ that a developer can maintain**
 
 ---
 
-## Transpiler Status
+## Why This Matters
 
-| Metric | Value |
-|--------|-------|
-| Output size ratio | 7:1 vs source .prg |
-| PHP dependencies | Zero (pure PHP output) |
-| Variable names (with -b) | Preserved (`$nTotal`, `$oDialog`) |
-| Variable names (without -b) | Obfuscated (`$local1`, `$local2`) |
-| Closures | Full `use()` clause support |
-| Error handling | SEQUENCE/RECOVER/END SEQUENCE |
-| Macro operations | `&cVar`, `&alias->field` |
-| WITH OBJECT | Full support |
+| | AWS Blu Age | Micro Focus | Heirloom | **Compile Cobol** |
+|---|---|---|---|---|
+| Languages | 1 (COBOL) | 1 (COBOL) | 2 (COBOL + PL/I) | **6** |
+| HLASM | No | No | No | **Yes (semantic lift)** |
+| Runtime cost | $0.31/core/hr | License fee | License fee | **$0** |
+| Output readability | Low | N/A (emulator) | Medium | **High** |
+| Compliance built-in | No | No | No | **6 frameworks** |
+| NIST-85 certified | Unknown | Partial | Unknown | **426/426 (100%)** |
 
----
-
-## Licensing Model
-
-Three tiers. Same transpiler, same runtime. Different access.
-
-### Runtime License — $499.99 · $199.99/update
-- webxphp.exe transpiler + protected framework + lean bootstrap
-- All deployment modes: PHP, CGI, FastCGI, mod_webx
-- App code: obfuscated (`$local1`) · Framework: obfuscated
-- 90-day support · 3 machines per license
-- Automatic error reporting → proactive support
-
-### Development License — $999.99 · $299.99/update
-- Everything in Runtime
-- Framework API documentation (what to call, not how it works)
-- App code: readable (`$nTotal`) · Framework: obfuscated
-- Priority 48-hour support
-- For shops actively building new features, not just running a migrated app
-
-### Migration License — $4,999.99 · $1,999.00/optional class update
-- Everything in Developer
-- ALL framework classes in readable PHP — fix bugs yourself, today
-- `.ch` preprocessor files included — study command syntax, add new commands
-- AI works end-to-end (no `$local1` boundary blocking context)
-- OOP subclassing: overrides survive any update automatically
-- Contributor model: submit fixes → ported to .prg source → next update benefits all tiers
-- Class updates are optional — never required if self-sufficient
-
-**Consulting**: $250/hour migration assistance (billed separately, any tier).
+**5-year TCO on 5M LOC portfolio: AWS Blu Age = ~$50M. Compile Cobol = ~$50K.**
 
 ---
 
-## Competitive Position
+## Architecture
 
-| Feature | Competitors | WebXPHP |
-|---------|-------------|---------|
-| No HTML/CSS/JS knowledge needed | ❌ | ✅ |
-| Desktop-identical API (TWindow, TBrowse, etc.) | Partial | ✅ |
-| Standard PHP hosting ($5/month) | ❌ | ✅ |
-| .prg stays on developer's machine | ❌ | ✅ |
-| Framework IP protected | N/A | ✅ |
-| Automatic error reporting | ❌ | ✅ |
-
-No direct competitor offers automatic `.prg → PHP` with a lean runtime on standard hosting.
-
----
-
-## Security
-
-WebX is secure by default. Unlike most frameworks where security is opt-in, WebX automatically
-protects your application:
-
-| Protection | What It Stops |
-|------------|---------------|
-| CSRF Tokens | Cross-site request forgery |
-| XSS Encoding | Script injection attacks |
-| Session Security | Cookie hijacking (HttpOnly) |
-| AJAX Whitelist | Code injection via actions |
-| JS Escaping | Parameter injection |
-
-See [SECURITY_FEATURES.md](SECURITY_FEATURES.md) and [SECURITY.md](SECURITY.md).
+```
+Source Code (COBOL/RPG/PL/I/HLASM/CL/JCL)
+    │
+    ▼
+┌─────────────────────────────────┐
+│  WebXCOBOL Compiler Pipeline    │
+│  Lexer → Parser → AST → Codegen│
+│  (119,000 lines of C)           │
+└─────────────┬───────────────────┘
+              │
+    ┌─────────┴─────────┐
+    ▼                   ▼
+  C++17              Java 21
+  (libwebxcob.h)     (RpgProgram.java, CobField.java)
+    │                   │
+    ▼                   ▼
+  MSVC/GCC/Clang     JDK 21
+    │                   │
+    ▼                   ▼
+  Native binary      .class / .jar
+  ($0 runtime)       ($0 runtime)
+```
 
 ---
 
-## Source
+## Quick Start
 
-- **Repository (WebX engine)**: https://github.com/mayapos/WebX
-- **Transpiler source**: `WebXPHP/src/harbour/compiler/map2php.c`
-- **Runtime**: `WebXPHP/samples/MayaPOS/webxphp_classes/webx_runtime.php`
-- **Sample app**: `WebXPHP/samples/MayaPOS/`
-- **Contact**: mayabuilders@gmail.com
-- **Website**: https://xbasephp.com
+```bash
+# COBOL → C++
+./webx -M program.cbl
+g++ -std=c++17 -I src/COBOL program.cpp -o program
+
+# COBOL → Java
+./webx -J program.cbl
+javac -cp java_build program.java
+
+# RPG IV → Java
+./rpg400 program.rpgle
+javac -cp java_build Program.java
+
+# HLASM → C++
+./asmx program.mlc
+g++ -std=c++17 program.cpp -o program
+```
 
 ---
 
-*© 2026 xBasePHP.com — Built by xBase developers, for xBase developers.*
+## Test Validation
+
+```
+COBOL C++:    219/219  (100%)
+COBOL Java:   203/203  (100%)
+NIST-85:      426/426  (100%)
+RPG IV:       306/306  (100%)
+PL/I:         156/156  (100%)
+HLASM:        250/250  (100%)
+CL:            50/50   (100%)
+────────────────────────────────
+Total:      1,610/1,610 (100%)
+```
+
+---
+
+### WebXPHP — FiveWin/Harbour to PHP Transpiler
+
+Separate product. Converts desktop FiveWin `.prg` applications to browser-based PHP — same API, standard hosting, zero Harbour dependency. See [WebXPHP docs](docs/) and the [MayaPOS reference implementation](https://github.com/mayapos/WebX).
+
+---
+
+## Contact
+
+- **Website**: [compilecobol.com](https://compilecobol.com) &middot; [xbasephp.com](https://xbasephp.com)
+- **Email**: mayabuilders@gmail.com
+- **GitHub**: [github.com/mayapos](https://github.com/mayapos)
+
+---
+
+*Built by Bayron Landaverry / Compile Cobol. 119,000 lines of compiler. One engineer. Six languages. Zero runtime fees.*
